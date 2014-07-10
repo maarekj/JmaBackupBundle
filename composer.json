@@ -1,0 +1,24 @@
+{
+    "name": "jma/backup-bundle",
+    "description": "Lets make a backup of the database",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Joseph Maarek",
+            "email": "josephmaarek@gmail.com"
+        }
+    ],
+    "require": {
+        "symfony/symfony": "~2.5",
+        "doctrine/doctrine-bundle": "~1.3"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "~4.2"
+    },
+    "minimum-stability": "dev",
+    "autoload": {
+        "psr-4": {
+            "Jma\\BackupBundle\\": "src/"
+        }
+    }
+}
