@@ -14,6 +14,7 @@ Provide a simple Symfony 2 Bundle to backup database via one command.
 ## Using and Setting Up
 
 ### Kernel.php
+
 ```php
 public function registerBundles() {
   $bundles = array(
