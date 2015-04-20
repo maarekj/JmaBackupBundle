@@ -66,8 +66,17 @@ class BackupSqlCommand extends ContainerAwareCommand
         $filename = strftime("%Y%m%d-%H%M%S") . ".sql";
         $out = $dir . DIRECTORY_SEPARATOR . $filename;
 
+        $opts = [
+            "-h $host",
+            "-u $username",
+            "-p$pass",
+        ];
+        if (!empty($port)) {
+            $opts[] = "-P $port";
+        }
+
         $verboseOpt = $output->getVerbosity() >= OutputInterface::VERBOSITY_VERY_VERBOSE ? "-v" : "";
-        $command = "$bin -h $host -P $port -u $username -p$pass $database $verboseOpt > $out";
+        $command = "$bin " . implode(' ', $opts) . " $database $verboseOpt > $out";
         $output->writeln($command);
         $process = new Process($command);
         $process->run(function ($type, $buffer) use ($output, $out) {

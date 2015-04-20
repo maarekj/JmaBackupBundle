@@ -18,7 +18,7 @@ Provide a simple Symfony 2 Bundle to backup database via one command.
 ```php
 public function registerBundles() {
   $bundles = array(
-    new Jma\BootstrapBundle()
+    new Jma\BackupBundle()
   );
 }
 ```
