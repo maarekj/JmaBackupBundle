@@ -1,6 +1,6 @@
 {
     "name": "jma/backup-bundle",
-    "version": "0.0.1",
+    "version": "1.0.3",
     "description": "Lets make a backup of the database",
     "license": "MIT",
     "authors": [
